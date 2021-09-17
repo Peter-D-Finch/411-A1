@@ -1,6 +1,6 @@
 use std::collections::LinkedList;
 use std::collections::HashMap;
-
+// TESTING CHANGE
 fn add_element(element: String, mut map: HashMap<String, LinkedList<String>>) -> HashMap<String, LinkedList<String>> {
     let mut key = String::from("");
     let mut value = String::from("");
