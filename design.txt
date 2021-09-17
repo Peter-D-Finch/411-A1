@@ -1,0 +1,28 @@
+Peter Finch & Abraham Chango
+CSC 411 A1 Intro Design Document
+
+- What are my data structures?
+	- We are using std::collections::LinkedList<T>
+		- A type T in the LinkedList becomes a String which in the world of ideas represents a name
+		- Final syntax is LinkedList<String>
+	- We are using std::collections::HashMap<K, V>
+		- A key K becomes a String which in the world of ideas represents a fingerprint
+		- A value V becomes a LinkedList<String> which in the world of ideas represents a fingerprint group
+		- Final syntax is HashMap<String, LinkedList<String>>
+
+- What are my invariants?
+	- For every fingerprint that I've read, it exists as a key in my HashMap (Invariant that holds part way through reading input lines)
+	- For every fingerprint that exists as a key in my HashMap, it will be less than 512 characters long
+	- For every fingerprint that I have read, it's corresponding names exist as a LinkedList<String> in my HashMap
+	- Any fingerprint that I have not yet seen does not exist as a key in the HashMap
+
+- How does this let me solve the problem?
+	- The program will initialize empty HashMap<String, LinkedList<String>>
+	- The program will take input through STDIN
+	- The program will parse different fingerprint and name pairs and store as String
+	- The program will split each String storing fingerprint and name in seperate Strings
+	- The program will check if each fingerprint already exists in HashMap
+		- If fingerprint isn't in HashMap, create LinkedList<String> object, add name to LinkedList, add LinkedList to HashMap
+		- If fingerprint is in HashMap, pull existing LinkedList<String>, add name to LinkedList<String>, replace in HashMap
+	- Find all LinkedLists in HashMap that have more than one element
+	- Print LinkedLists found in previous step which prints out the names in each fingerprint group, thus solving the problem.

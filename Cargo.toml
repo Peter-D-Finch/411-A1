@@ -1,0 +1,9 @@
+[package]
+name = "fgroups"
+version = "0.1.0"
+edition = "2018"
+authors = ["Peter Finch <peter_finch@uri.edu>", "Abraham Chango <abraham_chango@uri.edu>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
