@@ -52,7 +52,6 @@ fn add_element(element: String, mut map: HashMap<String, LinkedList<String>>) ->
 }
 
 fn main() {
-    let now = Instant::now();
     // Get input from user
     let mut test = String::new();
     let stdin = io::stdin();
