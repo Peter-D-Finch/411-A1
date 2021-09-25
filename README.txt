@@ -20,9 +20,10 @@ Fgroups Implementation:
         Fgroups handles badly formed input lines by discarding the line and writing a message to stderr.
         Fgroups handles fingerprints of more than 512 characters by discarding the line and writing a message to stderr.
         Fgroups will not crash due to repeating names.
+        Fgroups can process 5000 lines in 0.5 seconds, so 10,000 lines per second, meaning ~600,000 lines per minute assuming linear relationship.
 
     Not implemented:
-        Fgroups cannot process 500,000 lines per minute (~5000 lines per minute).
+        
 
 Fgroups Problem Solving:
     Sorting large amounts of data by a categorical trait i.e.
