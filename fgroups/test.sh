@@ -1,3 +1,3 @@
 #! /bin/sh
-cargo run <<'EOF'
-A Allen\nB Becca\nC Jack\nA Emily\nB Seth
+cd tests
+time ./big_input.sh
